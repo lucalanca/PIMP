@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <b>Alias:</b>
+  <%= @punch.alias %>
+</p>
+
+<p>
+  <b>Mac:</b>
+  <%= @punch.mac %>
+</p>
+
+<p>
+  <b>Local ip:</b>
+  <%= @punch.local_ip %>
+</p>
+
+<p>
+  <b>Public ip:</b>
+  <%= @punch.public_ip %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @punch.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @punch.longitude %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @punch.country %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @punch.city %>
+</p>
+
+
+<%= link_to 'Edit', edit_punch_path(@punch) %> |
+<%= link_to 'Back', punches_path %>

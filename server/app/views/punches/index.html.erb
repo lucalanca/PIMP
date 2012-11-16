@@ -1,0 +1,46 @@
+<header>
+    <h1 id="logo">Punch In</h1>
+    <%= form_tag punches_path, method: "get" do %>
+      <%= text_field_tag :search, @query %>
+      <%= submit_tag "Search" %>
+    <% end %>
+</header>
+
+<table>
+  <tr>
+    <th>Alias</th>
+    <th>Mac</th>
+    <th>Local ip</th>
+    <th>Public ip</th>
+    <th>Lat</th>
+    <th>Lng</th>
+    <th>Country</th>
+    <th>City</th>
+    <th>Updated at</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @punches.each do |punch| %>
+  <tr>
+    <td><%= punch.alias %></td>
+    <td><%= punch.mac %></td>
+    <td><%= punch.local_ip %></td>
+    <td><%= punch.public_ip %></td>
+    <td><%= punch.latitude %></td>
+    <td><%= punch.longitude %></td>
+    <td><%= punch.country %></td>
+    <td><%= punch.city %></td>
+    <td><%= punch.updated_at %></td>
+
+    <td><%= link_to 'Show', punch %></td>
+    <td><%= link_to 'Edit', edit_punch_path(punch) %></td>
+    <td><%= link_to 'Destroy', punch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Punch', new_punch_path %>

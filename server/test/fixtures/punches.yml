@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  mac: MyString
+  local_ip: MyString
+  public_ip: MyString
+  lat: MyString
+  lng: MyString
+
+two:
+  mac: MyString
+  local_ip: MyString
+  public_ip: MyString
+  lat: MyString
+  lng: MyString
