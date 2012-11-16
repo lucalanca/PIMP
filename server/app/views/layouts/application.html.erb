@@ -7,8 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<header id="navbar">
+    <h1 id="logo">Punch In</h1>
+    <%= form_tag punches_path, method: "get" do %>
+      <%= text_field_tag :search, @query %>
+      <%= submit_tag "Search" %>
+    <% end %>
+</header>
+<section id="body">
 <%= yield %>
+</section>
 
 </body>
 </html>
